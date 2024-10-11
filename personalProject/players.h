@@ -14,10 +14,14 @@ private:
     string position;
     string fact;
     string sideOfBall;
+    int age;
+    int height;
+    int weight;
+    string college;
 
 public:
     //constructor
-    Player(const string &name, int jerseyNumber, int yearsPro, const string &position, const string &fact, const string &sideOfBall);
+    Player(const string &name, int jerseyNumber, int yearsPro, const string &position, const string &fact, const string &sideOfBall, int age, int height, int weight, const string &college);
 
     //getters
 
@@ -27,7 +31,11 @@ public:
     string getPosition() const;
     string getFact() const;
     string getSideOfBall() const;
-
+    int getAge() const;
+    int getHeight() const;
+    int getWeight() const;
+    string getCollege() const;
+    
     void displayPlayer() const;
 };
 
