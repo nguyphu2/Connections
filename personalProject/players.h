@@ -21,7 +21,7 @@ private:
 
 public:
     //constructor
-    Player(const string &name, int jerseyNumber, int yearsPro, const string &position, const string &fact, const string &sideOfBall, int age, int height, int weight, const string &college);
+    Player(int jerseyNumber, const string &name, int yearsPro, const string &position, const string &fact, const string &sideOfBall, int age, int height, int weight, const string &college);
 
     //getters
 

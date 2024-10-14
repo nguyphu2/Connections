@@ -1,6 +1,6 @@
 #include "players.h"
 
-Player::Player(const string &name, int jerseyNumber, int yearsPro, const string &position, const string &fact, const string &sideOfBall, int age, int height, int weight, const string& college): name(name), jerseyNumber(jerseyNumber), yearsPro(yearsPro), position(position), fact(fact),sideOfBall(sideOfBall), age(age), height(height), weight(weight), college(college){};
+Player::Player(int jerseyNumber,const string &name, int yearsPro, const string &position, const string &fact, const string &sideOfBall, int age, int height, int weight, const string& college):jerseyNumber(jerseyNumber), name(name), yearsPro(yearsPro), position(position), fact(fact),sideOfBall(sideOfBall), age(age), height(height), weight(weight), college(college){};
 
     //getters
 

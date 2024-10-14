@@ -21,9 +21,38 @@ vector<Player> Selection::getPlayersByTrait (const string &trait, const string &
     }
 }
 
+
+string Selection::selectRandomTrait(const vector<string> &strings){
+    srand(static_cast<unsigned int>(time(0)));
+    if (strings.empty()){
+        throw runtime_error ("Empty List!");
+    }
+    return strings[rand() % strings.size()];
+}
+
+string Selection::selectSpecifcTrait(const vector<string> &trait){
+    srand(static_cast<unsigned int>(time(0)));
+    if (trait.empty()){
+        throw runtime_error ("No traits!");
+    }
+    return trait[rand()%trait.size()];
+}
+
 string Selection::getEasyTrait(const vector<string>& easyTraits){
+    string generalTrait = selectRandomTrait(easyTraits);
+    vector<Player> specificTrait = sortedTraits[generalTrait];
     
-};
-string Selection::getIntermediateTrait(const vector<string>& intermediateTraits){}; 
-string Selection::getMediumTrait(const vector<string>& mediumTraits){};
-string Selection::getHardTrait(const vector<string>& hardTraits){};
+      
+}
+string Selection::getIntermediateTrait(const vector<string>& intermediateTraits){
+    return selectRandomTrait(intermediateTraits);
+} 
+string Selection::getMediumTrait(const vector<string>& mediumTraits){
+    return selectRandomTrait(mediumTraits);
+}
+string Selection::getHardTrait(const vector<string>& hardTraits){
+    string traitSelected = selectRandomTrait(hardTraits);
+    cout<<traitSelected;
+    return traitSelected;
+}
+

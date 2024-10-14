@@ -14,10 +14,6 @@ class Selection {
     private:
     
     unordered_map<string, unordered_map<string, vector<Player>>>sortedTraits;
-    vector<string> easyTraits = {"position", "age", "sideOfBall"};
-    vector<string> intermediateTraits = {"jerseyNumber", "yearsPro"};
-    vector<string> mediumTraits = {"height", "college"};
-    vector<string> hardTraits = {"weight", "fact"};
     
     public: 
 
@@ -29,6 +25,9 @@ class Selection {
     string getIntermediateTrait(const vector<string>& intermediateTraits); 
     string getMediumTrait(const vector<string>& mediumTraits);
     string getHardTrait(const vector<string>& hardTraits);
+    
+    string selectRandomTrait(const vector<string> &strings);
+    string selectSpecifcTrait(const vector<string> &trait);
 };
 
 
